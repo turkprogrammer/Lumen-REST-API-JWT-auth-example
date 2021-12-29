@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-;
 
 class AuthController extends Controller {
 
@@ -14,7 +13,7 @@ class AuthController extends Controller {
         $email = $request->email;
         $password = $request->password;
 
-        //user validation     
+        //user validation
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:users',
